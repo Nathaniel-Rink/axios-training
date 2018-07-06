@@ -1,0 +1,25 @@
+{
+  "name": "axios-training",
+  "version": "1.0.0",
+  "description": "https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Nathaniel-Rink@github.com/Nathaniel-Rink/axios-training.git"
+  },
+  "author": "Nathaniel Rink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nathaniel-Rink/axios-training/issues"
+  },
+  "homepage": "https://github.com/Nathaniel-Rink/axios-training#readme"
+}
