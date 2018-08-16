@@ -22,8 +22,11 @@
 	<div class="panel panel-primary">
 		<div class="panel-heading">GET Request</div>
 		<div class="panel-body">
-			<button class="btn btn-primary" onclick="performGetRequest1()">Get Todos</button>
-			<button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+			<button class="btn btn-primary axiosGetRequest">Get Todos (axios)</button>
+			<button class="btn btn-primary javascriptRequest1">Get Todos (JS)</button>
+			<button class="btn btn-primary performAxiosGetError">Get error (axios)</button>
+			<button class="btn btn-primary performJSGetError">Get error (JS)</button>
+			<button class="btn btn-warning clearOutput">Clear</button>
 			<div class="panel-body" id="getResult1"></div>
 		</div>
 	</div>
@@ -31,8 +34,8 @@
 		<div class="panel-heading">GET Request with Paramaters</div>
 		<div class="panel-body">
 			<input type="text" class="form-control" id="todoId" placeholder="Todo ID ..."/><br/>
-			<button class="btn btn-primary" onclick="performGetRequest2()">Get Todos</button>
-			<button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+			<button class="btn btn-primary axiosGetRequestWParam">Get Todos</button>
+			<button class="btn btn-warning clearOutput">Clear</button>
 			<div class="panel-body" id="getResult2"></div>
 		</div>
 	</div>
@@ -45,7 +48,7 @@
 				</div>
 				<button type="submit" class="btn btn-primary">Send</button>
 			</form><br/>
-			<button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+			<button class="btn btn-warning clearOutput">Clear</button>
 			<div class="panel-body" id="postResult"></div>
 		</div>
 	</div>
@@ -57,7 +60,6 @@
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="module" src="scripts/utils.js"></script>
 <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
