@@ -9,6 +9,7 @@ $('.javascriptRequest1').click(javascriptRequest1);
 $('.performAxiosGetError').click(performAxiosGetError);
 $('.axiosGetRequestWParam').click(axiosGetRequestWParam);
 $('.performJSGetError').click(performJSGetError);
+$('.axiosPostRequest').click(axiosPostRequest);
 $('.clearOutput').click(clearOutput);
 
 //Clear out the result divs
@@ -104,7 +105,7 @@ function performJSGetError() {
 
 
 //Move the common block and tackle stuff out of the axios vs js gets
-function prepGetRequestWParam(generateError){
+function prepGetRequestWParam(){
 	const jsonPlaceholder = 'http://jsonplaceholder.typicode.com/todos';
 	let url = generateError ? jsonPlaceholder + 'nrhg' : jsonPlaceholder;
 
@@ -124,8 +125,8 @@ function prepGetRequestWParam(generateError){
 }
 
 //Axios adds params with just an additional option
-function axiosGetRequestWParam(evt, generateError) {
-	const obj = prepGetRequestWParam(generateError);
+function axiosGetRequestWParam() {
+	const obj = prepGetRequestWParam();
 	const url = obj.url;
 	const id = obj.id;
 	const $el = obj.el;
@@ -141,4 +142,29 @@ function axiosGetRequestWParam(evt, generateError) {
 		.catch(function (error) {
 			$el.html(utils.generateErrorHTMLOutput(error));
 		});
+}
+
+
+/*** POST */
+function axiosPostRequest(event){
+	const $el = $('#postResult');
+	const myInput = $('#todoTitle').val();
+	const url = 'http://jsonplaceholder.typicode.com/todos';
+
+	$el.html('');
+
+	axios.post(url, {
+		userId: '1',
+		title: myInput,
+		completed: false
+	})
+		.then(function(response){
+			console.log(response); //NRHG
+			$el.html(utils.generateSuccessHTMLOutput(response));
+		})
+		.catch(function(error){
+			$el.html(utils.generateErrorHTMLOutput(error));
+		});
+
+	event.preventDefault();
 }
