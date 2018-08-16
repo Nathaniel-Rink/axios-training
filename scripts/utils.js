@@ -1,4 +1,4 @@
-const utils = {
+export default {
 
 	//Just a utility function to render the data coming back
 	generateSuccessHTMLOutput(response) {
@@ -24,5 +24,3 @@ const utils = {
 			'<pre>' + JSON.stringify(error.response.data, null, '\t') + '</pre>';
 	}
 };
-
-export default utils;
