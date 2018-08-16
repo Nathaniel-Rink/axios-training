@@ -1,4 +1,4 @@
-var utils = {
+const utils = {
 
 	//Just a utility function to render the data coming back
 	generateSuccessHTMLOutput(response) {
